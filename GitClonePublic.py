@@ -12,6 +12,6 @@ public = []
 for repo in user.get_repos():
     if repo.private is False:
         public.append(repo.name)
-        Repo.clone_from(f"https://github.com/{ORG}/{repo.name}", repo.name)
+        Repo.clone_from(f"https://github.com/{ORG}/{repo.name}", f"/temp/CLONED/{repo.name}")
 
 print(f"DEBUG:>>> USER: {ORG} | PUBLIC REPOS: ", public)
