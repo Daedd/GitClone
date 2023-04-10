@@ -3,8 +3,7 @@ from github import Github
 
 g = Github()
 
-# USERNAME HERE
-ORG = "USERNAME/ORG"
+ORG = input("USER/ORG: ")
 
 user = g.get_user(ORG)
 repos = user.get_repos()
@@ -15,5 +14,4 @@ for repo in user.get_repos():
         public.append(repo.name)
         Repo.clone_from(f"https://github.com/{ORG}/{repo.name}", repo.name)
 
-print("DEBUG:>>> PUBLIC REPOS>>> ", public)
-
+print(f"DEBUG:>>> USER: {ORG} | PUBLIC REPOS: ", public)
