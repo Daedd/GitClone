@@ -10,5 +10,5 @@ repos = user.get_repos()
 
 for repo in user.get_repos():
     if repo.private is False:
-        print("Cloning: ", repo.full_name)
+        print("Cloning: ", repo.full_name, repo.url)
         Repo.clone_from(f"https://github.com/{ORG}/{repo.name}", f"/temp/CLONED/{repo.full_name}")
