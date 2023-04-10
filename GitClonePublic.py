@@ -4,7 +4,7 @@ from github import Github
 g = Github()
 
 # USERNAME HERE
-ORG = ("USERNAME/ORG")
+ORG = "USERNAME/ORG"
 
 user = g.get_user(ORG)
 repos = user.get_repos()
